@@ -1,0 +1,27 @@
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 30vw;
+
+    background-color: rgb(225, 225, 225);
+
+    padding: 2vw;
+    margin-top: 2vh;
+}
+
+form > label, input[type="checkbox"] {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+form > div.error-msg {
+    background-color: rgb(246, 119, 119);
+    color: white;
+
+    text-align: center;
+}
+
+form > small {
+    color: red;
+}
