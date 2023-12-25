@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+
+    background-color: grey;
+
+    margin: 0;
+    padding: 2vw;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+ul > li:not(:first-child) {
+    margin-left: 1vw;
+}
+
+li > a {
+    text-decoration: none;
+    color: white;
+}
+
+li > a:hover {
+    font-weight: 500;
+}

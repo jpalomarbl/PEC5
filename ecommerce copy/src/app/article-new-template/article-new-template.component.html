@@ -1,0 +1,27 @@
+<form (ngSubmit)="submitInfo()" [formGroup]="templateForm">
+    <h1>Create new article</h1>
+
+    <div *ngIf="errorMsg" class="error-msg">
+        <p>Formulario inválido</p>
+    </div>
+
+    <label for="name">Name: </label>
+    <input type="text" placeholder="PS5" name="name" id="name" formControlName="name" required>
+    <small *ngIf="errorName">Article name is required</small>
+
+    <label for="price">Price: </label>
+    <input type="number" placeholder="699" name="price" id="price" formControlName="price" step="0.01" min="0" required>
+    <small *ngIf="errorPrice">Article price is required</small>
+
+    <label for="img-url">Image URL: </label>
+    <input type="text" placeholder="URL" name="img-url" formControlName="imgUrl" id="img-url" pattern="^(https?:\/\/)[a-zA-Z0-9]+[.][a-zA-Z]{2,3}$" required>
+    <small *ngIf="errorImg === 'empty'">Article image is required</small>
+    <small *ngIf="errorImg === 'url'">Article image URL doesn't seem to be a URL</small>
+
+    <div class="on-sale">
+        <input type="checkbox" name="on-sale" id="on-sale" formControlName="onSale" checked>
+        <label for="on-sale">On Sale</label>
+    </div>
+
+    <input type="submit" value="Submit article">
+</form>
